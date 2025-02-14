@@ -1,0 +1,44 @@
+
+
+> devserver@1.0.0 dev /Users/mkchun/project/monorepo-nextjs-multiple/apps/devserver
+> nodemon ./dev-server.mjs
+
+[33m[nodemon] 3.1.9[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[32m[nodemon] starting `node ./dev-server.mjs`[39m
+✅ Server is running on http://localhost:4860
+{
+  [32m'localhost:4860/one'[39m: [32m'http://127.0.0.1:3001/one'[39m,
+  [32m'localhost:4860/two'[39m: [32m'http://127.0.0.1:3002/two'[39m,
+  [32m'localhost:4860/three'[39m: [32m'http://127.0.0.1:3003/three'[39m
+}
+{ [32m'^/one'[39m: [32m''[39m, [32m'^/two'[39m: [32m''[39m, [32m'^/three'[39m: [32m''[39m }
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./dev-server.mjs`[39m
+✅ Server is running on http://localhost:4860
+{
+  [32m'localhost:4860/one'[39m: [32m'http://127.0.0.1:3001/one'[39m,
+  [32m'localhost:4860/two'[39m: [32m'http://127.0.0.1:3002/two'[39m,
+  [32m'localhost:4860/three'[39m: [32m'http://127.0.0.1:3003/three'[39m
+}
+{ [32m'^/one'[39m: [32m''[39m, [32m'^/two'[39m: [32m''[39m, [32m'^/three'[39m: [32m''[39m }
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./dev-server.mjs`[39m
+✅ Server is running on http://localhost:4860
+{
+  [32m'localhost:4860/one'[39m: [32m'http://127.0.0.1:3001/one'[39m,
+  [32m'localhost:4860/two'[39m: [32m'http://127.0.0.1:3002/two'[39m,
+  [32m'localhost:4860/three'[39m: [32m'http://127.0.0.1:3003/three'[39m
+}
+{ [32m'^/one'[39m: [32m''[39m, [32m'^/two'[39m: [32m''[39m, [32m'^/three'[39m: [32m''[39m }
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./dev-server.mjs`[39m
+✅ Server is running on http://localhost:4860
+{
+  [32m'localhost:4860/one'[39m: [32m'http://127.0.0.1:3001/one'[39m,
+  [32m'localhost:4860/two'[39m: [32m'http://127.0.0.1:3002/two'[39m,
+  [32m'localhost:4860/three'[39m: [32m'http://127.0.0.1:3003/three'[39m
+}
+{ [32m'^/one'[39m: [32m''[39m, [32m'^/two'[39m: [32m''[39m, [32m'^/three'[39m: [32m''[39m }
