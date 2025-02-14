@@ -1,16 +1,15 @@
 import express from 'express';
 import { createProxyMiddleware } from 'http-proxy-middleware';
+import path, { dirname } from 'node:path';
 
 const app = express();
-const PORT = 4860;
+const PORT = 3000;
 
-const pathToLocalURL = (path) => `localhost:${PORT}${path}`;
-const pathToURL = (path, port) => `http://127.0.0.1:${port}${path}`;
-const routerMap = ['/one:3001', '/two:3002', '/three:3003'];
+const routerMap = ['/one:3001', '/two:3002', '/three:3003', '/home:3010'];
 
 const router = routerMap.reduce((obj, router) => {
     const [path, port] = router.split(':');
-    obj[pathToLocalURL(path)] = pathToURL(path, port);
+    obj[path] = { port: Number(port), protocol: 'http', host: '127.0.0.1' };
 
     return obj;
 }, {});
@@ -21,40 +20,18 @@ const pathRewrite = routerMap.reduce((obj, router) => {
     return obj;
 }, {});
 
-const homeProxy = createProxyMiddleware({
-    target: 'http://127.0.0.1:3001',
-    changeOrigin: true,
-    pathRewrite: {
-        '^/': ''
-    }
+app.get('/', (req, res) => {
+    res.sendFile(path.resolve('./index.html'));
 });
 
-const oneProxy = createProxyMiddleware({
-    target: 'http://127.0.0.1:3001',
-    changeOrigin: true,
-    pathRewrite: {
-        '^/one': ''
-    }
-});
-const twoProxy = createProxyMiddleware({
-    target: 'http://127.0.0.1:3002',
-    changeOrigin: true,
-    pathRewrite: {
-        '^/two': ''
-    }
-});
-const threeProxy = createProxyMiddleware({
-    target: 'http://127.0.0.1:3003',
-    changeOrigin: true,
-    pathRewrite: {
-        '^/three': ''
-    }
-});
-
-app.use('/', homeProxy);
-app.use('/one', oneProxy);
-app.use('/two', twoProxy);
-app.use('/three', threeProxy);
+app.use(
+    createProxyMiddleware({
+        target: 'http://127.0.0.1',
+        changeOrigin: true,
+        router,
+        pathRewrite
+    })
+);
 
 app.listen(PORT, (error) => {
     if (error) {
