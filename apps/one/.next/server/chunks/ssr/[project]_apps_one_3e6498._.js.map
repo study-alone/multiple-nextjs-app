@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/mkchun/project/monorepo-nextjs-multiple/apps/one/apps/one/src/app/not-found.tsx"],"sourcesContent":["import { headers } from 'next/headers';\n\nexport default async function NotFoundPage() {\n    const headersList = await headers();\n    console.log(headersList.values());\n\n    return (\n        <div>\n            <h1>Not Found!!</h1>\n        </div>\n    );\n}\n"],"names":[],"mappings":";;;;AAAA;;;AAEe,eAAe;IAC1B,MAAM,cAAc,MAAM,CAAA,GAAA,8PAAA,CAAA,UAAO,AAAD;IAChC,QAAQ,GAAG,CAAC,YAAY,MAAM;IAE9B,qBACI,6WAAC;kBACG,cAAA,6WAAC;sBAAG;;;;;;;;;;;AAGhB"}},
+    {"offset": {"line": 31, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 42, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":""}},
+    {"offset": {"line": 42, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
