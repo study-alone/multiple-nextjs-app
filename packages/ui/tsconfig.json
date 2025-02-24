@@ -1,0 +1,40 @@
+{
+    "extends": "@config/typescript/react-library",
+    "compilerOptions": {
+        // React 관련 설정
+        "allowImportingTsExtensions": true,
+        // 엄격한 타입 검사 설정
+        "useUnknownInCatchVariables": true,
+        "noImplicitOverride": true,
+        // 최신 JavaScript 기능 지원
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
+        // 추가 타입 체크 설정
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        // 경로 설정
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ]
+        },
+        // 최신 데코레이터 문법 지원
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+    },
+    "include": [
+        "src",
+        "tailwind.config.js"
+    ],
+    "exclude": [
+        "node_modules",
+        "build",
+        "dist",
+        "**/*.spec.ts",
+        "**/*.test.ts"
+    ]
+}

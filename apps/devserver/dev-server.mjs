@@ -1,11 +1,11 @@
 import express from 'express';
 import { createProxyMiddleware } from 'http-proxy-middleware';
-import path, { dirname } from 'node:path';
+import path from 'node:path';
 
 const app = express();
 const PORT = 3000;
 
-const routerMap = ['/one:3001', '/two:3002', '/three:3003', '/home:3010'];
+const routerMap = ['/inquiry:3001', '/product-subscription:3002', '/asset-management:3003', '/home:3010'];
 
 const router = routerMap.reduce((obj, router) => {
     const [path, port] = router.split(':');

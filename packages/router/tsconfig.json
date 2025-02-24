@@ -1,0 +1,18 @@
+{
+    "extends": "@config/typescript/nextjs",
+    "compilerOptions": {
+        "noEmit": false,
+        "allowImportingTsExtensions": false,
+        "baseUrl": ".",
+        "moduleResolution": "bundler",
+        "module": "ES2022",
+        "traceResolution": false
+    },
+    "include": [
+        "src/**/*",
+        "./eslint.config.mjs",
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

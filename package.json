@@ -4,16 +4,24 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "turbo run dev"
+        "dev": "turbo run dev",
+        "main": "pnpm --filter @web/main",
+        "inq": "pnpm --filter @web/inquiry",
+        "am": "pnpm --filter @web/asset-management",
+        "ps": "pnpm --filter @web/product-subscription",
+        "devserver": "pnpm --filter @dev/server",
+        "ui": "pnpm --filter @repo/ui",
+        "router": "pnpm --filter @repo/router"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "@changesets/cli": "^2.28.0",
         "express": "^4.21.2",
         "http-proxy-middleware": "^3.0.3",
         "nodemon": "^3.1.9",
+        "prettier": "^3.5.1",
         "turbo": "^2.4.2"
     },
     "packageManager": "pnpm@10.1.0"
