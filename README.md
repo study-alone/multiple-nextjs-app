@@ -80,6 +80,16 @@ pnpm run dev
 > 자유롭게 만들 수 있지만 프로젝트 진행 중 폴더명, package.json의 name을 변경하면  
 > `pnpm-locak.yaml`의 기록이 자동으로 현행화 되지 않으므로 모든 패키지에서 node_module을 다시 설치 해야합니다.
 
+다시 설치하기
+
+```sh
+rm -rf pnpm-lock.yaml node_modules
+# 또는
+pnpm dlx rimraf pnpm-lock.yaml node_modules # universal os
+
+pnpm install
+```
+
 ## turborepo
 
 turborepo에 대한 주의사항
