@@ -1,0 +1,35 @@
+{
+    "folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "packages/ui"
+		},
+		{
+			"path": "packages/prettier-config"
+		},
+		{
+			"path": "packages/router"
+		},
+		{
+			"path": "apps/asset-management"
+		},
+		{
+			"path": "apps/product-subscription"
+		},
+		{
+			"path": "apps/inquiry"
+		},
+		{
+			"path": "packages/typescript-config"
+		},
+		{
+			"path": "apps/main"
+		},
+		{
+			"path": "apps/devserver"
+		}
+	],
+    "settings": {}
+}
