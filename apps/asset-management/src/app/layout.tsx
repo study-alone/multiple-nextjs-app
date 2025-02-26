@@ -1,4 +1,3 @@
-import { ProjectRouterProvider } from '@repo/router'
 import { DefaultRootLayout } from '@repo/ui/root-layout'
 import '@repo/ui/global-ui.css'
 import './globals.css'
